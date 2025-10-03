@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wohaib Khalid | Blog</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --font-primary: 'Inter', sans-serif;
+            --font-heading: 'Roboto Slab', serif;
+        }
+        body {
+            font-family: var(--font-primary);
+            background-color: #f7f9fb;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+        }
+        .container {
+            max-width: 1024px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+        .nav-menu.active {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background-color: white;
+            padding: 1rem 0;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            z-index: 10;
+        }
+        .nav-menu:not(.active) {
+            display: none;
+        }
+        @media (min-width: 768px) {
+            .nav-menu {
+                display: flex !important;
+                position: static;
+                box-shadow: none;
+                flex-direction: row;
+                padding: 0;
+            }
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-20">
+        <nav class="navbar py-4">
+            <div class="container flex justify-between items-center max-w-screen-xl">
+                <a href="main.html#home" class="nav-logo text-3xl font-extrabold text-gray-700 tracking-tight">Wohaib Khalid</a>
+                <ul class="nav-menu md:flex space-x-6 text-lg font-medium">
+                    <li><a href="main.html#home" class="nav-link text-gray-600 hover:text-gray-600">Home</a></li>
+                    <li><a href="main.html#services" class="nav-link text-gray-600 hover:text-gray-600">Services</a></li>
+                    <li><a href="main.html#portfolio" class="nav-link text-gray-600 hover:text-gray-600">Portfolio</a></li>
+                    <li><a href="main.html#contact" class="nav-link text-gray-600 hover:text-gray-600">Contact</a></li>
+                    <li><a href="blog.html" class="nav-link active text-gray-700 font-bold border-b-2 border-gray-700">Blog</a></li>
+                </ul>
+                <div class="hamburger md:hidden cursor-pointer">
+                    <span class="block w-6 h-0.5 bg-gray-800 mb-1.5"></span>
+                    <span class="block w-6 h-0.5 bg-gray-800 mb-1.5"></span>
+                    <span class="block w-6 h-0.5 bg-gray-800"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="py-12 md:py-20">
+        <div class="container">
+            <header class="text-center mb-12">
+                <h1 class="text-4xl md:text-5xl font-extrabold mb-4">Wohaib's Blog</h1>
+                <p class="text-lg text-gray-600">Thoughts, insights, and analysis on business, sport, and entrepreneurship.</p>
+            </header>
+
+            <div class="space-y-12">
+                <!-- Blog Post Entry 1 -->
+                <article class="bg-white p-8 rounded-xl shadow-lg border-l-4 border-gray-500">
+                    <header>
+                        <p class="text-sm text-gray-500 mb-2">October 03, 2025</p>
+                        <h2 class="text-3xl font-bold mb-3">
+                            <a href="#" class="hover:text-gray-600">My First Blog Post</a>
+                        </h2>
+                    </header>
+                    <p class="text-gray-700 mb-4">This is a short summary or excerpt of the blog post. You can edit this to give readers a preview of the content before they click to read more. This helps engage your audience and improve readability.</p>
+                    <a href="#" class="font-medium text-gray-600 hover:text-gray-800">Read More →</a>
+                </article>
+
+                <!-- Blog Post Entry 2 -->
+                <article class="bg-white p-8 rounded-xl shadow-lg border-l-4 border-gray-500">
+                    <header>
+                        <p class="text-sm text-gray-500 mb-2">September 28, 2025</p>
+                        <h2 class="text-3xl font-bold mb-3">
+                            <a href="#" class="hover:text-gray-600">Another Interesting Topic</a>
+                        </h2>
+                    </header>
+                    <p class="text-gray-700 mb-4">Here is another example of a blog post summary. Keeping these consistent in length and tone can help the overall look and feel of your blog index page. Click the link to see the full article.</p>
+                    <a href="#" class="font-medium text-gray-600 hover:text-gray-800">Read More →</a>
+                </article>
+
+                <!-- Add new blog post entries above this line -->
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 mt-12">
+        <div class="container text-center max-w-screen-xl">
+            <p class="text-sm">© 2024 Wohaib Khalid. All Rights Reserved. | Doha, Qatar</p>
+        </div>
+    </footer>
+
+    <script>
+        // Script for mobile menu
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.querySelector('.hamburger');
+            const navMenu = document.querySelector('.nav-menu');
+            if (hamburger && navMenu) {
+                hamburger.addEventListener('click', () => {
+                    navMenu.classList.toggle('active');
+                });
+            }
+        });
+    </script>
+</body>
+</html>
